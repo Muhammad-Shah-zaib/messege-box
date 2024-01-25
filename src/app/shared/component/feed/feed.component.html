@@ -1,1 +1,26 @@
-<p>feed works!</p>
+<div class=" text-slate-300 flex flex-col gap-2 m-2 rounded-lg hover:bg-slate-600 cursor-pointer active:bg-slate-500 shadow-md">
+
+    @for (user of users; track user){
+        <!-- name of the person -->
+        <div class="border-t flex justify-between">
+            <span> 
+                <h4 class="text-xl font-bold text-white">{{ user.name }}</h4>
+            </span>
+            <span class="text-sm font-mono text-slate-400">
+                22/22/16
+            </span>
+        </div>
+
+        <!-- post of that person -->
+        <div class="border-b px-2">
+            <span>
+                <p class="text-lg font-semibold font-mono">Post:</p>
+                <span>
+                    <p class="m-2 font-mono">
+                        {{ user.post }}
+                    </p>
+                </span>
+            </span>
+        </div>
+    }
+</div>

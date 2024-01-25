@@ -1,13 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
-import { filter as filter$, take, tap as tap$, map as map$, switchMap, mergeMap, exhaustMap } from 'rxjs';
-import { imageData, image } from '../../shared/interfaces/imagesData';
-import { fromFetch } from 'rxjs/fetch';
+import { imageData } from '../../shared/interfaces/imagesData';
+import { FeedComponent } from '../../shared/component/feed/feed.component';
 
 @Component({
   selector: 'app-messages',
   standalone: true,
-  imports: [],
+  imports: [FeedComponent],
   templateUrl: './messages.component.html',
   styleUrl: './messages.component.scss'
 })
