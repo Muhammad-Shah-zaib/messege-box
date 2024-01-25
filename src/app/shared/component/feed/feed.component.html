@@ -1,8 +1,9 @@
-<div class=" text-slate-300 flex flex-col gap-2 m-2 rounded-lg hover:bg-slate-600 cursor-pointer active:bg-slate-500 shadow-md">
+<div class=" h-[85vh] overflow-auto">
 
     @for (user of users; track user){
+        <div class="text-slate-300 flex flex-col gap-2 p-2 rounded-lg hover:bg-slate-600 cursor-pointer active:bg-slate-500 shadow-md">
         <!-- name of the person -->
-        <div class="border-t flex justify-between">
+        <div class="border-t border-slate-500 flex justify-between">
             <span> 
                 <h4 class="text-xl font-bold text-white">{{ user.name }}</h4>
             </span>
@@ -12,7 +13,7 @@
         </div>
 
         <!-- post of that person -->
-        <div class="border-b px-2">
+        <div class="px-2">
             <span>
                 <p class="text-lg font-semibold font-mono">Post:</p>
                 <span>
@@ -22,5 +23,6 @@
                 </span>
             </span>
         </div>
+    </div>
     }
 </div>
