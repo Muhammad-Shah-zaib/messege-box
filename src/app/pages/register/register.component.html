@@ -1,1 +1,21 @@
-<p>register works!</p>
+<div>
+    <app-card>
+        <card-title>SignUp</card-title>
+        <card-body>
+            <form class="flex flex-col gap-3 items-center justify-center mt-2">
+                <mat-form-field class="w-full"  color="accent">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text" placeholder="Ex: example@gmail.com" required> 
+                </mat-form-field>
+                <mat-form-field class="w-full" color="accent">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="text" placeholder="***" required> 
+                </mat-form-field>
+                <div class="flex justify-between items-center  w-full lg:px-6">
+                    <button mat-raised-button color="accent" type="submit" class="lg:text-lg text-sm">Submit</button>
+                    <a class="md:text-md lg:border-0 text-sm hover:underline text-blue-500 cursor-pointer text-center" routerLink="">Already have an acount?</a>
+                </div>
+            </form>
+        </card-body>
+    </app-card>
+</div>

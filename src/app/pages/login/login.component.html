@@ -1,6 +1,30 @@
-<app-card>
-    <card-title>
-        <h3>Login here</h3>
-    </card-title>
-    <card-body class="form">sds</card-body>
-</app-card>
+<div>
+    <app-card>
+        <!-- Form Title -->
+        <card-title>Login</card-title>
+
+        <card-body>
+            <form class="flex flex-col gap-3 items-center justify-center mt-2" (ngSubmit)="onSubmit()">
+
+                <!-- Email input -->
+                <mat-form-field class="w-full">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text" placeholder="Ex: example@gmail.com"> 
+                </mat-form-field>
+
+                <!-- Password input -->
+                <mat-form-field class="w-full">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="text" placeholder="***"> 
+                </mat-form-field>
+
+                <!--form FOOTER -->
+                <div class="flex justify-between items-center  w-full lg:px-6">
+                    <button mat-raised-button color="accent" type="submit" class="lg:text-lg text-sm">Submit</button>
+                    <a class="md:text-md lg:border-0 text-sm hover:underline text-blue-500 cursor-pointer text-center" routerLink="register">Don't have an account</a>
+                </div>
+
+            </form>
+        </card-body>
+    </app-card>
+</div>
